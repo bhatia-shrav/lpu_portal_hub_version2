@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* =========================================================
+   BACKGROUND EFFECTS GALLERY
+   These classes are reusable. Add one class to <body>.
+   Example: <body class="bg-radial-glow">
+   ========================================================= */
+
+:root {
+    --ink: #315B58;
+    --teal: #527D75;
+    --mint: #CAF4F4;
+    --cream: #FCFFE9;
+    --pink: #FDE0D9;
+    --green: #CAEFD1;
+    --yellow: #FFF2CC;
+    --muted: #73847C;
+    --line: #E4ECE4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.demo-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background: #F7FBF7;
+}
+
+/* 01. PASTEL RADIAL GLOW
+   Best match for the current EduTrack login background. */
+.bg-radial-glow {
+    background:
+        radial-gradient(circle at 10% 12%, #FDE0D9, transparent 32%),
+        radial-gradient(circle at 90% 88%, #CAEFD1, transparent 32%),
+        #CAF4F4;
+}
+
+/* 02. PASTEL MESH GRADIENT
+   Several soft colour lights overlap. */
+.bg-mesh {
+    background:
+        radial-gradient(at 8% 15%, rgba(253, 224, 217, 0.95) 0, transparent 38%),
+        radial-gradient(at 88% 12%, rgba(255, 242, 204, 0.95) 0, transparent 35%),
+        radial-gradient(at 85% 88%, rgba(202, 239, 209, 0.95) 0, transparent 38%),
+        radial-gradient(at 15% 90%, rgba(202, 244, 244, 0.95) 0, transparent 38%),
+        #FCFFE9;
+}
+
+/* 03. AURORA GRADIENT
+   A cool, atmospheric background. */
+.bg-aurora {
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(91, 217, 194, 0.55), transparent 42%),
+        radial-gradient(ellipse at 80% 15%, rgba(151, 133, 235, 0.48), transparent 40%),
+        radial-gradient(ellipse at 55% 95%, rgba(65, 145, 190, 0.5), transparent 45%),
+        #142B3A;
+}
+
+/* 04. FLOATING COLOUR BLOBS
+   Soft blurred shapes made with multiple gradients. */
+.bg-blobs {
+    background:
+        radial-gradient(circle at 18% 25%, rgba(253, 190, 190, 0.85), transparent 27%),
+        radial-gradient(circle at 82% 22%, rgba(255, 225, 150, 0.8), transparent 25%),
+        radial-gradient(circle at 70% 82%, rgba(165, 226, 195, 0.85), transparent 30%),
+        radial-gradient(circle at 20% 85%, rgba(166, 224, 235, 0.8), transparent 27%),
+        #FFFDF5;
+}
+
+/* 05. MINIMAL GRID */
+.bg-grid {
+    background-color: #F8FCF8;
+    background-image:
+        linear-gradient(rgba(82, 125, 117, 0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(82, 125, 117, 0.10) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+/* 06. SOFT DOT PATTERN */
+.bg-dots {
+    background-color: #FCFFE9;
+    background-image: radial-gradient(rgba(82, 125, 117, 0.23) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+}
+
+/* 07. DIAGONAL STRIPES */
+.bg-stripes {
+    background-color: #F9FCF6;
+    background-image: repeating-linear-gradient(
+        135deg,
+        rgba(82, 125, 117, 0.075) 0,
+        rgba(82, 125, 117, 0.075) 1px,
+        transparent 1px,
+        transparent 13px
+    );
+}
+
+/* 08. CONIC COLOUR SPOTLIGHT */
+.bg-conic {
+    background:
+        conic-gradient(
+            from 210deg at 50% 50%,
+            #FDE0D9,
+            #FFF2CC,
+            #CAEFD1,
+            #CAF4F4,
+            #DCD6FF,
+            #FDE0D9
+        );
+}
+
+/* 09. GLASSMORPHISM
+   Add bg-glass-stage to the page/section and glass-panel to the card. */
+.bg-glass-stage {
+    background:
+        radial-gradient(circle at 15% 20%, #FDE0D9, transparent 30%),
+        radial-gradient(circle at 85% 75%, #CAEFD1, transparent 32%),
+        linear-gradient(135deg, #CAF4F4, #FFF2CC);
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.40);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 18px 45px rgba(49, 91, 88, 0.13);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+}
+
+/* 10. DARK NEON GLOW */
+.bg-dark-neon {
+    background:
+        radial-gradient(circle at 18% 22%, rgba(42, 190, 176, 0.34), transparent 34%),
+        radial-gradient(circle at 82% 78%, rgba(135, 93, 219, 0.38), transparent 36%),
+        #101827;
+}
+
+/* 11. SUNRISE GRADIENT */
+.bg-sunrise {
+    background:
+        linear-gradient(135deg, rgba(255, 242, 204, 0.92), transparent 55%),
+        linear-gradient(35deg, #FDE0D9, #FFF7E8 55%, #F4D9E9);
+}
+
+/* 12. CORNER WASH */
+.bg-corner-wash {
+    background:
+        radial-gradient(ellipse at top left, rgba(202, 244, 244, 0.95), transparent 48%),
+        #FCFFE9;
+}
+
+/* =========================================================
+   GALLERY PAGE DESIGN
+   These styles only build the showcase page.
+   ========================================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 76px 20px 68px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 12% 15%, rgba(253, 224, 217, 0.95), transparent 30%),
+        radial-gradient(circle at 90% 85%, rgba(202, 239, 209, 0.95), transparent 32%),
+        #CAF4F4;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    right: -100px;
+    top: -130px;
+    border: 1px solid rgba(82, 125, 117, 0.13);
+    border-radius: 50%;
+    box-shadow: 0 0 0 25px rgba(255,255,255,0.10), 0 0 0 50px rgba(255,255,255,0.08);
+    pointer-events: none;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1,
+.intro-row h2,
+.how-to h2 {
+    margin: 0;
+    color: var(--ink);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 6vw, 54px);
+    line-height: 1.12;
+}
+
+.hero-copy {
+    max-width: 610px;
+    margin: 17px auto 23px;
+    color: #62766E;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.hero-link {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 19px;
+    color: var(--cream);
+    background: var(--teal);
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.hero-link:hover {
+    background: var(--ink);
+    transform: translateY(-2px);
+}
+
+.page-wrap {
+    width: min(1120px, calc(100% - 36px));
+    margin: 0 auto;
+}
+
+.intro-row {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 48px 0 22px;
+}
+
+.intro-row h2,
+.how-to h2 {
+    font-size: clamp(25px, 3vw, 32px);
+}
+
+.intro-note {
+    max-width: 360px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.effect-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.effect-card {
+    overflow: hidden;
+    background: rgba(252, 255, 233, 0.94);
+    border: 1px solid rgba(82, 125, 117, 0.10);
+    border-radius: 20px;
+    box-shadow: 0 10px 28px rgba(49, 91, 88, 0.08);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.effect-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 34px rgba(49, 91, 88, 0.13);
+}
+
+.preview {
+    display: grid;
+    min-height: 205px;
+    place-items: center;
+    padding: 22px;
+}
+
+.preview-radial { background:
+    radial-gradient(circle at 10% 12%, #FDE0D9, transparent 34%),
+    radial-gradient(circle at 90% 88%, #CAEFD1, transparent 34%), #CAF4F4; }
+.preview-mesh { background:
+    radial-gradient(at 8% 15%, #FDE0D9 0, transparent 38%),
+    radial-gradient(at 88% 12%, #FFF2CC 0, transparent 35%),
+    radial-gradient(at 85% 88%, #CAEFD1 0, transparent 38%),
+    radial-gradient(at 15% 90%, #CAF4F4 0, transparent 38%), #FCFFE9; }
+.preview-aurora { background:
+    radial-gradient(ellipse at 15% 20%, rgba(91,217,194,.7), transparent 42%),
+    radial-gradient(ellipse at 80% 15%, rgba(151,133,235,.65), transparent 40%),
+    radial-gradient(ellipse at 55% 95%, rgba(65,145,190,.65), transparent 45%), #142B3A; }
+.preview-blobs { background:
+    radial-gradient(circle at 18% 25%, #FDC9C9 0, transparent 28%),
+    radial-gradient(circle at 82% 22%, #FFE5A5 0, transparent 27%),
+    radial-gradient(circle at 70% 82%, #BCE8C8 0, transparent 30%),
+    radial-gradient(circle at 20% 85%, #BDEBF0 0, transparent 28%), #FFFDF5; }
+.preview-grid { background-color: #F8FCF8; background-image:
+    linear-gradient(rgba(82,125,117,.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(82,125,117,.13) 1px, transparent 1px);
+    background-size: 25px 25px; }
+.preview-dots { background-color: #FCFFE9; background-image:
+    radial-gradient(rgba(82,125,117,.32) 1.4px, transparent 1.4px); background-size: 19px 19px; }
+.preview-stripes { background-color: #F9FCF6; background-image:
+    repeating-linear-gradient(135deg, rgba(82,125,117,.10) 0, rgba(82,125,117,.10) 1px, transparent 1px, transparent 12px); }
+.preview-conic { background: conic-gradient(from 210deg, #FDE0D9, #FFF2CC, #CAEFD1, #CAF4F4, #DCD6FF, #FDE0D9); }
+.preview-glass { background:
+    radial-gradient(circle at 15% 20%, #FDE0D9, transparent 34%),
+    radial-gradient(circle at 85% 75%, #CAEFD1, transparent 34%),
+    linear-gradient(135deg, #CAF4F4, #FFF2CC); }
+.preview-dark { background:
+    radial-gradient(circle at 18% 22%, rgba(42,190,176,.45), transparent 34%),
+    radial-gradient(circle at 82% 78%, rgba(135,93,219,.48), transparent 36%), #101827; }
+.preview-sunrise { background:
+    linear-gradient(135deg, rgba(255,242,204,.92), transparent 55%),
+    linear-gradient(35deg, #FDE0D9, #FFF7E8 55%, #F4D9E9); }
+.preview-corner { background:
+    radial-gradient(ellipse at top left, rgba(202,244,244,.98), transparent 50%), #FCFFE9; }
+
+.sample-panel {
+    display: flex;
+    width: min(100%, 255px);
+    min-height: 125px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 17px;
+    text-align: center;
+    background: rgba(252, 255, 233, 0.80);
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 17px;
+    box-shadow: 0 10px 25px rgba(49,91,88,.10);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.sample-panel strong,
+.glass-panel strong {
+    color: var(--ink);
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+}
+
+.sample-panel > span:last-child,
+.glass-panel > span:last-child {
+    color: #6E8078;
+    font-size: 11px;
+}
+
+.mini-tag {
+    color: var(--teal);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.sample-panel-dark {
+    background: rgba(15, 30, 43, 0.55);
+    border-color: rgba(255,255,255,.22);
+}
+
+.sample-panel-dark strong,
+.sample-panel-dark > span:last-child {
+    color: #F5FFF9;
+}
+
+.sample-panel-dark .mini-tag {
+    color: #A8E8D8;
+}
+
+.glass-panel {
+    display: flex;
+    width: min(100%, 255px);
+    min-height: 125px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 17px;
+    border-radius: 17px;
+    text-align: center;
+}
+
+.card-info {
+    padding: 18px 19px 20px;
+}
+
+.card-info h3 {
+    margin: 0 0 9px;
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.card-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.level {
+    padding: 5px 8px;
+    color: #527D75;
+    background: #E7F4E9;
+    border-radius: 999px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .6px;
+}
+
+.card-info p {
+    min-height: 59px;
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.card-info code,
+.how-to code {
+    padding: 5px 8px;
+    color: #315B58;
+    background: #EAF5EE;
+    border: 1px solid #D8E7D9;
+    border-radius: 7px;
+    font-size: 11px;
+}
+
+.plus-note {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.how-to {
+    margin: 48px 0 28px;
+    padding: 30px;
+    background: #FCFFE9;
+    border: 1px solid rgba(82,125,117,.12);
+    border-radius: 22px;
+    box-shadow: 0 12px 32px rgba(49,91,88,.07);
+}
+
+.how-to .eyebrow {
+    margin-bottom: 8px;
+}
+
+.how-to > p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.how-to pre {
+    overflow-x: auto;
+    margin: 12px 0 18px;
+    padding: 15px 17px;
+    color: #E8FFF5;
+    background: #243F3C;
+    border-radius: 12px;
+    line-height: 1.7;
+}
+
+.how-to pre code {
+    padding: 0;
+    color: inherit;
+    background: none;
+    border: 0;
+    font-size: 12px;
+}
+
+.how-to .tip {
+    margin-top: 20px;
+    padding: 12px 15px;
+    color: #52665D;
+    background: #F1F7E8;
+    border-left: 3px solid #8BB8A5;
+    border-radius: 8px;
+}
+
+.footer {
+    padding: 0 0 28px;
+    color: #89978F;
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .effect-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 58px 18px 52px;
+    }
+
+    .page-wrap {
+        width: min(100% - 26px, 500px);
+    }
+
+    .intro-row {
+        display: block;
+        padding-top: 36px;
+    }
+
+    .intro-note {
+        margin-top: 12px;
+    }
+
+    .effect-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .preview {
+        min-height: 190px;
+    }
+
+    .card-info p {
+        min-height: 0;
+    }
+
+    .how-to {
+        padding: 23px 19px;
+        margin-top: 34px;
+    }
+}

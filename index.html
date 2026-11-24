@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Login | LPU Portal Hub</title>
+<link rel="stylesheet" href="background-effects.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="site bg-blobs">
+<main class="login-wrap">
+  <section class="login-card">
+    <h1>Welcome back</h1>
+    <p class="sub">Sign in to reach all your LPU portals in one place.</p>
+    <form id="loginForm" action="portals.html">
+      <div id="errorMsg" class="login-error" role="alert"></div>
+      <label for="uid">Student ID</label>
+      <input id="uid" name="uid" type="text" autocomplete="username" placeholder="Enter your ID">
+      <label for="pwd">Password</label>
+      <input id="pwd" name="pwd" type="password" autocomplete="current-password" placeholder="Enter your password">
+      <button class="btn" type="submit">Sign in</button>
+    </form>
+    <p class="hint">Enter your student ID and password to sign in.</p>
+  </section>
+</main>
+<script src="login.js"></script>
+</body>
+</html>
